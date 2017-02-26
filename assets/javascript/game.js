@@ -21,15 +21,10 @@ var tally = 0;
 //Reset Function
 var resetVariables = function() {
     randomNumber = Math.floor((Math.random() * 120) + 19);
-    console.log(randomNumber);
     crystalValue1 = Math.floor((Math.random() * 12) + 1);
     crystalValue2 = Math.floor((Math.random() * 12) + 1);
     crystalValue3 = Math.floor((Math.random() * 12) + 1);
     crystalValue4 = Math.floor((Math.random() * 12) + 1);
-    console.log(crystalValue1);
-    console.log(crystalValue2);
-    console.log(crystalValue3);
-    console.log(crystalValue4);
     $("#random-number").empty();
     $("#random-number").append(randomNumber);
     tally = 0;
@@ -47,8 +42,8 @@ var tallyUpdate = function() {
     $("#losses").append("Losses:" + " " + losses);
 }
 
-//Game function(The brain behind the operation)
-var gameLogic = function() {
+//Game function(The brain behind the operation)var gameLogic = function() {
+
     if (tally == randomNumber) {
         alert("You have matched the number congratulations!!!!!!!");
         wins++;
