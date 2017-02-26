@@ -11,7 +11,7 @@
 //Global Variables
 var wins = 0;
 var losses = 0;
-var randomNumber = 0;
+var randomNumber = Math.floor((Math.random() * 120) + 19);
 var crystalValue1 = 0;
 var crystalValue2 = 0;
 var crystalValue3 = 0;
@@ -43,7 +43,7 @@ var tallyUpdate = function() {
 }
 
 //Game function(The brain behind the operation)var gameLogic = function() {
-
+var gameLogic = function() {
     if (tally == randomNumber) {
         alert("You have matched the number congratulations!!!!!!!");
         wins++;
@@ -57,8 +57,8 @@ var tallyUpdate = function() {
     } else {
         tallyUpdate();
     }
-
 }
+
 
 //Actual Game!!!!!!
 resetVariables();
